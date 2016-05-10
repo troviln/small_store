@@ -1,0 +1,12 @@
+<div class="gallery">
+   <div class="img-wrap big-image ">
+    <img width="400"height="auto" ng-src="[[ product.images[current].image ]]" />
+    </div>
+   <div >
+   <ul class="img-thumbnails clearfix small-image-list">
+          <li class='small-image thumbnail' ng-repeat="image in product.images">
+          <img  ng-click="setCurrent($index)" ng-src="[[ image.image ]]"  />
+          </li>
+   </ul>
+   </div>
+</div>

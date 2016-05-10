@@ -1,0 +1,34 @@
+<div>
+    <ul class="list-unstyled ">
+      <h4>Reviews</h4>
+      <li ng-repeat="review in product.reviews ">
+        <blockquote class="list-reviews">
+          {{review.review}}
+          <cite class="clearfix">—{{review.user}}</cite>
+        </blockquote>
+      </li>
+    </ul>
+    <ul class="list-unstyled">
+     <li ng-if="product.reviews==false">
+        <blockquote class="list-reviews">no reviews yet</blockquote>
+      </li>
+    </ul>
+
+    <!--  Review Form -->
+    <form name="reviewForm"  ng-submit="addReview()">
+
+
+      <!--  Review Form -->
+      <h4>Submit a Review</h4>
+      <fieldset class="form-group">
+        <textarea ng-model="add_review" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+      </fieldset>
+
+    </form>
+
+
+</div>

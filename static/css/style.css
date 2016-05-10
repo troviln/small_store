@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+.leader-h {
+  width: 100%;
+  background-color: #333;
+  color: #fafafa;
+  padding: 50px 10%;
+  margin: 0;
+}
+
+.user-h {
+  color: #00cccc;
+  padding-left: 25px;
+  float: left;
+  font-size: 12px;
+  width: 100%;
+}
+
+.product-container {
+  margin: 20px auto;
+  width: 80%;
+  padding: 30px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.new-product-input {
+  width: 100%;
+  height: 32px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+.new-product-input:focus {
+  border-color: #00cccc;
+  outline: none;
+}
+
+.btn-product {
+  margin-top: 10px;
+  background-color: #33cc00;
+  color: #fafafa;
+  font-size: 16px;
+  float: right;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-product:hover {
+  background-color: #4DE61A;
+}
+
+.btn-product:active {
+  background-color: #009900;
+}
+
+
+.btn-product_del {
+  margin-top: 10px;
+  background-color: #188023;
+  color: #fafafa;
+  font-size: 10px;
+  float: right;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-product_del:hover {
+  background-color: #00c0a4;
+}
+
+.btn-product_del:active {
+  background-color: #007600;
+}
+
+
+.product-time {
+  color: gray;
+  font-style: italic;
+  margin-bottom: 10px;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.product-name {
+  color: #00cccc;
+  font-style: italic;
+  margin-bottom: 10px;
+  font-size: 12px;
+  float:left;
+  margin-right:10px;
+}
+
+.product-body {
+  font-size: 20px;
+}
+
+.div-profile {
+  margin: 20px auto;
+  width: 80%;
+  padding: 30px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ul-profile {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.li-profile {
+  /* font: 200 20px/1.5 Helvetica, Verdana, sans-serif; */
+  border-bottom: 1px solid #ccc;
+}
+.gallery {
+  position: relative;
+}
+.small-image-list {
+   position: absolute;
+   top: 0;
+   right: 0;
+
+}
+
+.small-image {
+
+  width: 50px;
+  height: 50px;
+  overflow: auto;
+
+}
+.big-image {
+
+  width:100%;
+  height:100%;
+  max-height: 480px;
+  border-radius: 5px;
+
+
+}
+
+.list-reviews {
+  margin: 20px;
+
+}
+
+.cl1 {
+width: 95%; /* Ширина блока со всеми новостями */
+
+margin: 5px; /* Выравнивание по середине */
+-moz-column-count: 3; /* Для Firefox */
+-moz-column-width: 250px;
+-moz-column-gap: 10px;
+-webkit-column-count: 3; /* Для Safari и Chrome */
+-webkit-column-width: 250px;
+-webkit-column-gap: 10px;
+column-count: 3; /* Количество колонок */
+column-width: 250px; /* Ширина колонки */
+column-gap: 10px; /* Отступ колонки */
+
+
+
+}
+
+.cl2 {
+  margin: 10px;
+  height: 500px;
+  max-height: 500px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  overflow: auto;
+
+  width: 360px; /* Ширина отдельного блока новости */
+  display: inline-table; /* Определяет, что элемент является таблицей как при использовании тега <table>, но при этом таблица является встроенным элементом и происходит ее обтекание другими элементами */
+
+
+  position: relative;
+}
+
+.product-price {
+  color: #188023;
+ float: right;
+  font-size: 18px;
+
+
+}
+.product-title-bot {
+ padding: 10px;
+ position: absolute;
+  background-color: rgba(53, 70, 92, 0.1);
+  width: 100%;
+  bottom: 0;
+}
+
+
+
+
