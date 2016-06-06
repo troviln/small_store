@@ -3,6 +3,7 @@ angular.module('productApp', [
   'ngResource',
   'productApp.services',
   'productApp.controllers',
+  'ngMaterial',
 ])
   .config(function ($interpolateProvider, $httpProvider, $resourceProvider, $stateProvider, $urlRouterProvider) {
     // Force angular to use square brackets for template tag

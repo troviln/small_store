@@ -5,6 +5,7 @@ productControllers.controller('ProductCtrl', function ProductCtrl($scope, Produc
 
   Product.query(function (response) {
     $scope.products = response;
+
   });
 });
 
