@@ -1,15 +1,27 @@
 
 
 
-
 <div class="products-list" id="products-target">
 
   <div  class="filter_menu sliderdemoBasicUsage">
 
      <label>Search: <input ng-model="searchText" ></label>
+     <div layout="column">
+        <div style="margin:auto;">
+          <h3>Filter by price</h3>
+          <p>Selected range: [[lower|currency]]-[[upper|currency]]</p>
+          <range-slider lower-value="lower" upper-value="upper" min-gap="10" step="10" min="min" max="max" ></range-slider>
+          <input type="number" placeholder="From" ng-model="lower"/>
+          <input type="number" placeholder="To" ng-model="upper"/>
+          <br>
+        </div>
+
+    </div>
 
 
-    </div><div class="cl1"  ng-repeat="product in products | filter:searchText |orderBy: 'product-time'  ">
+    </div><div class="cl1"  ng-repeat="product in products | filter: searchText
+                                                           | filter:byRange('price', lower-value, upper-value)
+                                                           | orderBy: 'product-time'   ">
          <a ui-sref="product({ pr_id:product.id })">
          <div class="img-wrap big-image-list ">
             <img  width="300" height="auto"  ng-src="[[ product.images[0].image ]]" />
@@ -22,42 +34,6 @@
             </div>
         </div>
 
+  </div>
  </div>
- <div  ng-cloak="" class="sliderdemoBasicUsage" >
-  <md-content style="margin: 16px; padding:16px">
-
-    <h3>
-      RGB <span ng-attr-style="border: 1px solid #333; background: rgb({{color.red}},{{color.green}},{{color.blue}})">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    </h3>
-
-    <md-slider-container>
-      <span>R</span>
-      <md-slider md-discrete round='6' flex="" min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider">
-      </md-slider>
-      <md-input-container>
-        <input flex="" type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
-
-      </md-input-container>
-    </md-slider-container>
-
-    <md-slider-container>
-      <span>G</span>
-      <md-slider flex="" ng-model="color.green" min="0" max="255" aria-label="green" id="green-slider" class="md-accent">
-      </md-slider>
-      <md-input-container>
-        <input flex="" type="number" ng-model="color.green" aria-label="green" aria-controls="green-slider">
-      </md-input-container>
-    </md-slider-container>
-
-    <md-slider-container>
-      <span class="md-body-1">B</span>
-      <md-slider flex="" ng-model="color.blue" min="0" max="255" aria-label="blue" id="blue-slider" class="md-primary">
-      </md-slider>
-      <md-input-container>
-        <input flex="" type="number" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
-      </md-input-container>
-    </md-slider-container>
-
-    <div style="margin-top: 50px;"></div></div>
-</div>
 

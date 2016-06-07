@@ -4,6 +4,7 @@ angular.module('productApp', [
   'productApp.services',
   'productApp.controllers',
   'ngMaterial',
+  'mdRangeSlider',
 ])
   .config(function ($interpolateProvider, $httpProvider, $resourceProvider, $stateProvider, $urlRouterProvider) {
     // Force angular to use square brackets for template tag
