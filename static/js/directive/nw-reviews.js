@@ -22,7 +22,7 @@ angular.module('productApp')
        };
 
     },
-    templateUrl: "static/partials/directive/nw-reviews.html",
+    templateUrl: "static/partials/directive/nw-reviews.html"
 
   };
 });

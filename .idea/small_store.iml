@@ -19,6 +19,7 @@
     <orderEntry type="library" name="angular-animate" level="application" />
     <orderEntry type="library" name="angular-aria" level="application" />
     <orderEntry type="library" name="angular-messages" level="application" />
+    <orderEntry type="library" name="angular-ui-router" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

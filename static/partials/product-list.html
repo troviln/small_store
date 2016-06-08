@@ -1,6 +1,4 @@
 
-
-
 <div class="products-list" id="products-target">
 
   <div  class="filter_menu">
@@ -30,11 +28,14 @@
             <img  width="300" height="auto"  ng-src="[[ product.images[0].image ]]" />
          </div></a><div class="product-title-bot">
             <a  ui-sref="product({ pr_id:product.id })" > <div class="product-title"> [[ product.name_product ]]
-            </div></a><div class="product-body"> [[ product.about_product ]]
-           <!-- </div><div class="product-name"> [[ product.user ]]
+            </div></a><!--<div class="product-body"> [[ product.about_product ]]
+            </div><div class="product-name"> [[ product.user ]]
             </div><div class="product-time"> [[ product.created_date | date:'medium' ]]-->
-            </div><div class="product-price"> [[ product.price | currency]]
-            </div>
+            <div> <md-button class="md-fab md-mini" ng-click="showTabDialog($event,product.id)" aria-label="Buy">
+                     BUY
+                  </md-button>
+            <div class="product-price"> [[ product.price | currency]]
+            </div></div>
         </div>
 
   </div>

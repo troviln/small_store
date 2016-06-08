@@ -20,7 +20,7 @@ angular.module('productApp', [
     $resourceProvider.defaults.stripTrailingSlashes = false;
 
     // Django expects jQuery like headers
-    // $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
+    //$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
     // Routing
     $urlRouterProvider.otherwise('/');
@@ -39,5 +39,6 @@ angular.module('productApp', [
         url: '/product/:pr_id/',
         templateUrl: 'static/partials/product-detail.html',
         controller: 'DetailCtrl'
-      })
+      });
+
   });

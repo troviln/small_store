@@ -1,6 +1,6 @@
 var productControllers = angular.module('productApp.controllers', []);
 
-productControllers.controller('ProductCtrl', function ProductCtrl($scope, Product) {
+productControllers.controller('ProductCtrl', function ProductCtrl($scope, Product, $mdDialog, $mdMedia) {
   $scope.products = [];
 
     Product.query(function (response) {
@@ -36,6 +36,51 @@ productControllers.controller('ProductCtrl', function ProductCtrl($scope, Produc
           return minValue <= item[fieldName] && item[fieldName] <= maxValue;
         };
       };
+
+ //buy dialog
+   $scope.status = '  ';
+   $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
+   $scope.showTabDialog = function(ev, id) {
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: 'static/partials/buy-dialog.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      locals: { product: Product.get({id:id}) },
+      clickOutsideToClose:true
+    })
+        .then(function(answer) {
+          $scope.status = 'You said the information was "' + answer + '".';
+        }, function() {
+          $scope.status = 'You cancelled the dialog.';
+        });
+  };
+
+function DialogController($scope, $mdDialog, product) {
+  $scope.product = product;
+  $scope.hide = function() {
+    $mdDialog.hide();
+  };
+  $scope.cancel = function() {
+    $mdDialog.cancel();
+  };
+  $scope.answer = function(answer) {
+    $mdDialog.hide(answer);
+  };
+}
+
+});
+
+productControllers.controller('DialogController', function DialogController($scope, $mdDialog) {
+  $scope.hide = function() {
+    $mdDialog.hide();
+  };
+  $scope.cancel = function() {
+    $mdDialog.cancel();
+  };
+  $scope.answer = function(answer) {
+    $mdDialog.hide(answer);
+  };
 });
 
 

@@ -225,6 +225,7 @@ body {
 .product-price {
   color: #188023;
   float: right;
+  bottom: 0;
   font-size: 18px;
 
 
@@ -270,6 +271,11 @@ input[type=number]{
 .num-inpt{
   margin-left: 0;
   margin-right: 10%;
+
+}
+
+.button-buy{
+ float:right;
 
 }
 

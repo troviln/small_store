@@ -1,7 +1,8 @@
 <div class="products" id="products-detail">
   <div class="product-container" >
 
-    <div class=""><a ui-sref="product({ pr_id:product.id })"> [[ product.name_product ]]</a></div>
+    <div class=""><a ui-sref="product({ pr_id:product.id })"> [[ product.name_product ]]</a>
+    </div>
     <div class="event-body"> [[ product.about_product  ]]</div>
     <div class="event-name"> [[ product.user ]]</div>
     <div class="event-time"> [[ product.created_date | date:'medium' ]]</div>
@@ -9,6 +10,10 @@
 
 <nw-gallery product="product" ></nw-gallery>
 <hr>
+      <div class="button-buy"><md-button class="md-fab" ng-click="showTabDialog($event,product.id)" aria-label="Buy">
+                     BUY
+                  </md-button>
+      </div>
 <nw-reviews product="product" ></nw-reviews>
 
 
