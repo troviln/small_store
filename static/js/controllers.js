@@ -13,7 +13,7 @@ productControllers.controller('ProductCtrl', function ProductCtrl($scope, Produc
    $scope.pr = [];
    $scope.$watch('products.length', function(length) {
       if(length) { // <= first time length is changed from undefined to 0
-        console.log('(watch) read more ' + $scope.products.length); // <= will log correct length
+        //console.log('(watch) read more ' + $scope.products.length); // <= will log correct length
            angular.forEach($scope.products, function(product){
            $scope.pr.push(product.price);
          });

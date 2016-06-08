@@ -3,19 +3,22 @@
 
 <div class="products-list" id="products-target">
 
-  <div  class="filter_menu sliderdemoBasicUsage">
+  <div  class="filter_menu">
 
-     <label>Search: <input ng-model="searchText" ></label>
-     <div layout="column">
+     <label>Search: <input class="form-control" ng-model="searchText" ></label>
+     <div>
         <div style="margin:auto;">
           <h3>Filter by price</h3>
-          <p>Selected range: [[lower|currency]]-[[upper|currency]]</p>
           <range-slider lower-value="lower" upper-value="upper" min-gap="10" step="10" min="min" max="max" ></range-slider>
-          <input type="number" placeholder="From" ng-model="lower"/>
-          <input type="number" placeholder="To" ng-model="upper"/>
-          <br>
+           <div class="num-inpt input-sm">
+              <div class="col-xs-6">
+                  <input class="form-control" id="ex1" type="number" min="min" max="max" placeholder="From" ng-model="lower">
+              </div>
+              <div class="col-xs-6">
+                  <input class="form-control" id="ex2" type="number" min="min" max="max" placeholder="To" ng-model="upper">
+              </div>
+          </div>
         </div>
-
     </div>
 
 
@@ -26,8 +29,8 @@
          <div class="img-wrap big-image-list ">
             <img  width="300" height="auto"  ng-src="[[ product.images[0].image ]]" />
          </div></a><div class="product-title-bot">
-            <div class="product-title"><a ui-sref="product({ pr_id:product.id })"> [[ product.name_product ]]</a>
-            </div><div class="product-body"> [[ product.about_product ]]
+            <a  ui-sref="product({ pr_id:product.id })" > <div class="product-title"> [[ product.name_product ]]
+            </div></a><div class="product-body"> [[ product.about_product ]]
            <!-- </div><div class="product-name"> [[ product.user ]]
             </div><div class="product-time"> [[ product.created_date | date:'medium' ]]-->
             </div><div class="product-price"> [[ product.price | currency]]
