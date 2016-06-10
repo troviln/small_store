@@ -25,6 +25,7 @@ angular.module('productApp', [
     //$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
     // Routing
+    //$locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
     $stateProvider
 
