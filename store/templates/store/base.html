@@ -3,7 +3,7 @@
 <html lang="en" ng-app="productApp" >
 <head>
    <!--delete # from url
-  <base href="/" >-->
+   <base href="/" >-->
 
   <meta charset="UTF-8">
   <title>Products</title>
@@ -26,6 +26,9 @@
   <ul>
     <li ui-sref-active="active"><a ui-sref="products"><span>All Products</span></a></li>
     <li ui-sref-active="active"><a ui-sref="profile"><span>Profile</span></a></li>
+
+    <li style="float:right;" ui-sref-active="active"><a ui-sref="cart"><span>cart</span></a></li>
+
   </ul>
 </div>
 <h3 class="user-h">logged in as: {{ user.get_username }}</h3>
@@ -53,6 +56,7 @@
 
 
   <script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+
    <!-- Services -->
   <script type="text/javascript" src="{% static 'js/services.js'%}"></script>
    <!-- Controllers -->

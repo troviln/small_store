@@ -1,22 +1,28 @@
-<md-dialog aria-label="Mango (Fruit)">
+<md-dialog aria-label="Buy (test)">
   <form>
     <md-toolbar>
       <div class="md-toolbar-tools">
-        <h2>Mango (Fruit)</h2>
+        <h2>Buy (test)</h2>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
-          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+          <md-icon md-svg-src="static/image/buy.svg" aria-label="Close dialog"></md-icon>
         </md-button>
       </div>
     </md-toolbar>
+
     <md-dialog-content style="max-width:800px;max-height:810px; ">
+
       <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="one">
           <md-content class="md-padding">
-            <h1 class="md-display-2">Tab One</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+            <h1 class="md-display-1">Your contact</h1>
+              <div style="width:500px;">
+                  <input class="form-control" id="ex1" placeholder="Name" ng-model="Name">
+                  <input class="form-control" id="ex2" placeholder="Contact" ng-model="Contac">
+              </div>
           </md-content>
         </md-tab>
+
         <md-tab label="two">
           <md-content class="md-padding">
             <h1 class="md-display-2">Tab Two</h1>
@@ -25,6 +31,7 @@
             <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
           </md-content>
         </md-tab>
+
         <md-tab label="three">
           <md-content class="md-padding">
             <h1 class="md-display-2">Tab Three</h1>
@@ -32,18 +39,22 @@
           </md-content>
         </md-tab>
       </md-tabs>
+
     </md-dialog-content>
+
     <md-dialog-actions layout="row">
       <md-button  ui-sref="product({ pr_id:product.id })" target="_blank"  >
-        More on Wikipedia
+        More about product
       </md-button>
-      <span flex></span>
+
+     <!-- <span flex></span>
       <md-button ng-click="answer('not useful')" >
         Not Useful
       </md-button>
+
       <md-button ng-click="answer('useful')" style="margin-right:20px;" >
         Useful
-      </md-button>
+      </md-button>-->
     </md-dialog-actions>
   </form>
 </md-dialog>

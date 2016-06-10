@@ -1,3 +1,4 @@
+
 var productControllers = angular.module('productApp.controllers', []);
 
 productControllers.controller('ProductCtrl', function ProductCtrl($scope, Product, $mdDialog, $mdMedia) {
@@ -40,10 +41,10 @@ productControllers.controller('ProductCtrl', function ProductCtrl($scope, Produc
  //buy dialog
    $scope.status = '  ';
    $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
-   $scope.showTabDialog = function(ev, id) {
+   $scope.showBuyDialog = function(ev, id) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'static/partials/buy-dialog.html',
+      templateUrl: 'static/partials/dialog-buy.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       locals: { product: Product.get({id:id}) },
@@ -103,3 +104,7 @@ productControllers.controller('DetailCtrl', function DetailCtrl($scope,$statePar
 
 });
 
+productControllers.controller('Ctrl', function Ctrl($scope)
+{
+
+});

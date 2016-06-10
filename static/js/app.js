@@ -1,3 +1,4 @@
+"use strict";
 angular.module('productApp', [
   'ui.router',
   'ngResource',
@@ -5,6 +6,7 @@ angular.module('productApp', [
   'productApp.controllers',
   'ngMaterial',
   'mdRangeSlider',
+
 ])
   .config(function ($interpolateProvider, $httpProvider, $resourceProvider, $stateProvider, $urlRouterProvider) {
     // Force angular to use square brackets for template tag
@@ -25,6 +27,17 @@ angular.module('productApp', [
     // Routing
     $urlRouterProvider.otherwise('/');
     $stateProvider
+
+      .state('cart', {
+        url: '/cart/',
+        templateUrl: 'static/partials/modules/shop-cart.html',
+        controller: 'Ctrl'
+      })
+      .state('checkout', {
+        url: '/checkout/',
+        templateUrl: 'static/partials/modules/checkout.html',
+        controller: 'Ctrl'
+      })
       .state('products', {
         url: '/',
         templateUrl: 'static/partials/product-list.html',
@@ -36,9 +49,11 @@ angular.module('productApp', [
         controller: 'UserCtrl'
       })
       .state('product', {
-        url: '/product/:pr_id/',
-        templateUrl: 'static/partials/product-detail.html',
-        controller: 'DetailCtrl'
-      });
+          url: '/product/:pr_id/',
+          templateUrl: 'static/partials/product-detail.html',
+          controller: 'DetailCtrl'
+      })
+      ;
+
 
   });

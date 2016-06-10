@@ -1,5 +1,6 @@
 // Resources have the following methods by default:
 // get(), query(), save(), remove(), delete()
+"use strict";
 
 angular.module('productApp.services', ['ngResource'])
   .factory('Product', function($resource) {
